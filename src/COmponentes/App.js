@@ -20,7 +20,7 @@ function App() {
         <p id="p1">¿Que quieres hacer?</p>
         <div className = "row" style = {{height : "100px", width : "100px"}}>
         <Button variant="contained" color="primary" id="uno" onClick={()=>cambioZona("PAS")}>Dar de alta PAS</Button>
-        <Button variant="contained" color="primary" id="dos">Dar de alta Centro Sanitario</Button>
+        <Button variant="contained" color="primary" id="dos" onClick = {() => cambioZona("Centro")}>Dar de alta Centro Sanitario</Button>
         <Button variant="contained" color="primary" id="tres">Dar de alta médico</Button>
         <Button variant="contained" color="primary" id="cuatro">Crear cuadro médico</Button>
         <Button variant="contained" color="primary" id="cinco">Visualizar Cuadros<br></br> Médicos</Button>

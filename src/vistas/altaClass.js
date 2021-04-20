@@ -1,16 +1,16 @@
-
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios'
 import '../css/App.css'
 
-const baseUrl = ""
-class altaProver extends Component {
+const baseUrl = "https://6b879fbb-dcd7-47a5-bd07-1bb17232f1a6.mock.pstmn.io"
+class altaClass extends Component {
 
 
 constructor(props){
     super(props);
+    this.asociado=React.createRef()
     this.cif = React.createRef()
     this.nombre = React.createRef()
     this.direccion = React.createRef()
@@ -24,6 +24,7 @@ constructor(props){
 
     savePAS = async () => {
         var pas={
+            asociado: this.asociado.current.value,
             cif : this.cif.current.value,
             nombre : this.nombre.current.value, 
             direccion: this.direccion.current.value,
@@ -40,6 +41,8 @@ constructor(props){
             await axios.post(baseUrl, {param:this.pas})
 
         }
+
+        
         
     
    
@@ -47,7 +50,8 @@ constructor(props){
         return (
             <div>
             <div className="App-header">
-              <p id="p1">Alta de Proveedor de Asistencia Sanitaria</p>
+              <p id="p1">Crear Centro Sanitario</p>
+              <input id = "standard-basic" ref = {this.asociado} placeholder={"PAS asociado"} label="CIF" onChange = { this.savePAS}/>
               <input id = "standard-basic" ref = {this.cif} placeholder={"CIF"} label="CIF" onChange = { this.savePAS}/>
               <input id="standard-basic" label="Nombre Completo" ref = {this.nombre} placeholder={"Nombre Completo"}/>
               <input id="standard-basic" label="Dirección"ref = {this.direccion} placeholder={"Direccion"}/>
@@ -57,8 +61,8 @@ constructor(props){
               <input id="standard-basic" label="Persona de contacto" ref = {this.PersCont}placeholder={"Persona de Contacto"}/>
               <input id="standard-basic" label="Email" ref = {this.Email}placeholder={"Email"}/>
               <input id="standard-basic" label="Tipo de proveedor" ref = {this.proveedores}placeholder={"Tipo de proveedor"}/>
-              <Button variant="contained" color="primary" id="ocho" onClick={this.alta()}>Dar de alta PAS</Button>
-              <Button variant="contained" color="primary" id="nueve">Dar de alta Centro Sanitario</Button>
+              <Button variant="contained" color="primary" id="ocho" onClick={this.alta()}>Especialidad</Button>
+              <Button variant="contained" color="primary" id="nueve">Guardar y Salir</Button>
       
             </div>
             </div>
@@ -66,4 +70,4 @@ constructor(props){
     }
 }
 
-export default altaProver;
+export default altaClass;
