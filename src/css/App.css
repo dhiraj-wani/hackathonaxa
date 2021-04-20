@@ -1,0 +1,92 @@
+.App {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#p1{
+  font-size:20px;
+  position:absolute;
+  left:60px;top:120px;
+}
+
+#uno{
+  font-size:30px;
+  position:absolute;
+  left:60px;top:180px;
+}
+#dos{
+  font-size:30px;
+  position:absolute;
+  left:500px;top:180px;
+}
+#tres{
+  font-size:30px;
+  position:absolute;
+  left:60px;top:320px;
+}
+#cuatro{
+  font-size:30px;
+  position:absolute;
+  left:500px;top:320px;
+}
+#cinco{
+  font-size:30px;
+  position:absolute;
+  left:60px;top:460px;
+}
+#seis{
+  font-size:30px;
+  position:absolute;
+  left:500px;top:460px;
+}
+#siete{
+  font-size:30px;
+  position:absolute;
+  left:280px;top:660px;
+}
+
+#ocho{
+  margin-bottom: 5px
+}
+
+#standard-basic{
+  margin-bottom: 5px;
+}

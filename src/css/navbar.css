@@ -1,0 +1,13 @@
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    background-color: grey;
+    height: 2cm;
+}
+
+.logo{
+    
+    padding-bottom: 0%;
+    width: 1cm;
+}
+
